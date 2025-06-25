@@ -11,8 +11,8 @@ header {
 }
 
 img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
 }
 
 #nav_list {
@@ -39,6 +39,7 @@ img {
     display: none;
 }
 
+/* Estilos gerais para mobile */
 @media screen and (max-width: 1170px) {
     #nav_list {
         display: none;
@@ -48,26 +49,65 @@ img {
         display: block;
         border: none;
         background-color: transparent;
-        font-size: 1.5rem;
+        font-size: 2rem;
         cursor: pointer;
+        z-index: 1001;
+    }
+
+    #mobile_menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color:rgba(233, 91, 134, 0.2);
+    backdrop-filter: blur(5px);       
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: slideDown 0.4s ease forwards;
+    z-index: 1000;
     }
 
     #mobile_menu.active {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+    }
+
+    #mobile_nav_list .nav-item {
+        text-align: center;
+        background-color: transparent;
     }
 
     #mobile_nav_list {
         display: flex;
         flex-direction: column;
-        gap: 12px;
-        margin: 12px 0px;
-    }
-
-    #mobile_nav_list .nav-item {
+        gap: 24px;
         list-style: none;
-        text-align: center;
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
     }
 
+    #mobile_nav_list .nav-item a {
+        font-size: 1.5rem;
+        color: #1d1d1d;
+        text-decoration: none;
+        background: transparent;
+        padding: 10px 20px;
+        transition: background 0.3s ease, color 0.3s ease;
+        background-color: transparent;
+    }
+
+    /* Animação */
+    @keyframes slideDown {
+        from {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
 }
