@@ -39,7 +39,7 @@ img {
     display: none;
 }
 
-/* Estilos gerais para mobile */
+
 @media screen and (max-width: 1170px) {
     #nav_list {
         display: none;
@@ -60,7 +60,7 @@ img {
     left: 0;
     height: 100vh;
     width: 100%;
-    background-color:rgba(233, 91, 134, 0.2);
+    background-color:rgba(255, 0, 76, 0.356);
     backdrop-filter: blur(5px);       
     display: none;
     justify-content: center;
@@ -99,7 +99,6 @@ img {
         background-color: transparent;
     }
 
-    /* Animação */
     @keyframes slideDown {
         from {
             transform: translateY(-100%);
