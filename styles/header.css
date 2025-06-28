@@ -70,6 +70,9 @@ img {
     z-index: 1000;
     }
 
+    #mobile_btn i {
+        background-color: transparent;
+    }
     #mobile_menu.active {
         display: flex;
     }
